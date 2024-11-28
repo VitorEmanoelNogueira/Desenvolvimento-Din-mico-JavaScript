@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fazendo lista de times com DOM</title>
+</head>
+<body>
+    <ul class="listatime">
+
+    </ul>
+</body>
+<script>
+    let times = ["Real Madrid", "Barcelona", "Juventus", "Cruzeiro", "Whey 💪", "Creatina 💪", "Supino 💪", "Agachamento 🦵"];
+
+    var listadetimes = document.querySelector("ul.listatime");
+    
+    times.forEach(element => {
+    let listItem = document.createElement('li');
+    listItem.innerText = element;
+    listItem.style.border = '1px solid blue';
+    listadetimes.appendChild(listItem);        
+    });
+</script>
+</html>

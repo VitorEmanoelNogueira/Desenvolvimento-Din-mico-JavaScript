@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prática - Média de Notas</title>
+</head>
+<body>
+    
+</body>
+<script>
+let totalNotas = 0;
+
+let quantidadeEstudantes = 0;
+
+let nota;
+
+window.alert('Digite as notas dos estudantes (digite um valor negativo para encerrar):');
+
+while (true) {
+  nota = parseFloat(prompt('Digite a nota do estudante:'));
+
+  if (nota < 0) {
+    break;
+  }
+
+  totalNotas += nota;
+
+  quantidadeEstudantes++;
+
+}
+
+if (quantidadeEstudantes > 0) {
+
+  const media = totalNotas / quantidadeEstudantes;
+
+  alert('A média das notas é:' + media.toFixed(2));
+
+} else {
+
+  alert('Nenhuma nota foi digitada.');
+
+}
+
+</script>
+</html>

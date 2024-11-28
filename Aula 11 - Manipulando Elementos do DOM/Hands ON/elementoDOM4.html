@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elemento DOM Exemplo 5</title>
+</head>
+<body>
+    <h1>Usando seletor do DOM</h1>
+    <ul>
+        <li>Java</li>
+        <li>Python</li>
+        <li>NodeJS</li>
+    </ul>
+    <div id="conteudo" name="divconteudo" class="mensagem">
+
+
+
+    </div>
+
+    <div name="divconteudo" class="mensagem">
+
+
+    </div>
+
+    <div name="divconteudo" class="mensagem">
+
+
+    </div>
+
+    <span id="novospan" class="novo">
+        Texto no span
+    </span>
+
+    <div class="mensagem">
+
+
+    </div>
+</body>
+<script>
+    let elemento0 = document.getElementsByTagName('li')[0];
+    elemento0.style.color = 'blue';
+
+    let elemento1 = document.getElementsByTagName('li')[1];
+    elemento1.style.background = 'red';
+
+    let elemento2 = document.getElementsByTagName('li')[2]
+    elemento2.innerText = 'SpringBoot';
+
+
+    let elementodiv = document.getElementById('conteudo');
+    elementodiv.innerHTML = '<p>Estou colocando o elemento de parágrafo dentro do HTML</p>';
+
+    
+    let elementoNome = document.getElementsByName('divconteudo')[1];
+    elementoNome.style.color ='green';
+    elementoNome.innerText ='Estou colocando um texto na div';
+
+
+    let elementoClass = document.getElementsByClassName('mensagem')[2];
+    elementoClass.innerHTML = '<p>Colocando outro parágrafo yeaaahhhh</p>'
+
+
+    let elementoSpanClass = document.querySelector('span.novo');
+    elementoSpanClass.style.color = 'purple';
+
+
+    let elementoSeletor = document.querySelectorAll('.mensagem')[3];
+    elementoSeletor.innerHTML = '<p>Parágrafo do querySelectorAll</p>';
+
+</script>
+</html>
